@@ -13,7 +13,7 @@ module.exports = {
 
         "black-coffee": "#322A2E",
 
-        "temp-ey": "#E6814B",
+        "temp-ey": "#E3DCCA",
 
         "temp-päron": "#DCE7D3",
 
