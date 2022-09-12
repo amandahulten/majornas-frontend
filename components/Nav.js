@@ -1,8 +1,6 @@
-import styles from "../styles/nav.module.css";
-
 const Nav = () => {
   return (
-    <nav className={styles.container}>
+    <nav className="flex">
       <a>hem</a>
       <a>kalendarium</a>
       <h1>Majornas böcker & kaffe</h1>

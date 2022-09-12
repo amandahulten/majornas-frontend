@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <Nav />
         <title>Majornas böcker & kaffe</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
