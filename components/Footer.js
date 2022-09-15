@@ -34,6 +34,20 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          <div className="text-whiteish">
+            <p>Tis - Fre</p>
+            <p className="font-bold">11:00 - 18:00</p>
+            <p>Lör</p>
+            <p className="font-bold">11:00 - 15:00</p>
+            <p>Sön - Mån</p>
+            <p className="font-bold">Stängt</p>
+          </div>
+          <div className="text-whiteish">
+            <p>Hem</p>
+            <p>Aktuellt</p>
+            <p>Om oss</p>
+            <p>Kontakt</p>
+          </div>
         </div>
       </div>
     </footer>
