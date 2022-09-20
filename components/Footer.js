@@ -46,7 +46,7 @@ const Footer = () => {
             <p className="mb-[18px]">Hem</p>
             <p className="mb-[18px]">Aktuellt</p>
             <p className="mb-[18px]">Om oss</p>
-            <p className="mb-[18px]">Kontakt</p>
+            <p className="mb-[50px]">Kontakt</p>
           </div>
         </div>
       </div>
