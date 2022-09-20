@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
       <div className="h-[20px] bg-black-coffee"></div>
       <div className="bg-[url('../public/bg-footer-desktop.svg')]">
-        <div className="py-2 px-8 md:flex md:justify-between md:pt-[50px]">
+        <div className="py-2 px-8 md:flex md:justify-between md:pt-[50px] lg:ml-[100px]">
           <div>
             <p className="text-[32px] text-whiteish text-center font-h1">
               majorna
@@ -36,8 +36,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="md:flex md:flex-row-reverse w-[40%] md:justify-between md:mb-[50px]">
-            <div className="text-whiteish mt-[50px]  mr-[20px] lg:hidden">
+          <div className="md:flex md:flex-row-reverse w-[50%] md:justify-between md:mb-[50px] lg:mr-[100px]">
+            <div className="text-whiteish mt-[50px] mr-[20px] lg:hidden">
               <div>
                 <p className="mr-[25px]">Tis - Fre</p>
                 <p className="font-bold">11:00 - 18:00</p>
@@ -65,7 +65,7 @@ const Footer = () => {
                 <p className="font-bold mb-[18px]">Stängt</p>
               </div>
             </div>
-            <div className="text-whiteish mt-[50px]">
+            <div className="text-whiteish mt-[50px] lg:ml-[50px]">
               <p className="mb-[18px]">Hem</p>
               <p className="mb-[18px]">Aktuellt</p>
               <p className="mb-[18px]">Om oss</p>
