@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "CourierPrime";
+    font-weight: normal;
+    src: url("../assets/fonts/Courier_Prime/CourierPrime-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "CourierPrime";
+    font-weight: bold;
+    src: url("../assets/fonts/Courier_Prime/CourierPrime-Bold.ttf");
+  }

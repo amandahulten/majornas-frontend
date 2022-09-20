@@ -13,13 +13,16 @@ module.exports = {
 
         "black-coffee": "#322A2E",
 
-        "temp-ey": "#E6814B",
+        "temp-ey": "#E3DCCA",
 
         "temp-päron": "#DCE7D3",
 
         "temp-yellow": "#D1D7DF",
 
         illustration: "#F5D8C6",
+      },
+      fontFamily: {
+        "courier-prime": "CourierPrime",
       },
     },
   },
