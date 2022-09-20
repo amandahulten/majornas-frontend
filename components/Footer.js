@@ -34,19 +34,19 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="text-whiteish">
+          <div className="text-whiteish mt-[50px]">
             <p>Tis - Fre</p>
             <p className="font-bold">11:00 - 18:00</p>
-            <p>Lör</p>
+            <p className="mt-[18px]">Lör</p>
             <p className="font-bold">11:00 - 15:00</p>
-            <p>Sön - Mån</p>
+            <p className="mt-[18px]">Sön - Mån</p>
             <p className="font-bold">Stängt</p>
           </div>
-          <div className="text-whiteish">
-            <p>Hem</p>
-            <p>Aktuellt</p>
-            <p>Om oss</p>
-            <p>Kontakt</p>
+          <div className="text-whiteish mt-[50px]">
+            <p className="mb-[18px]">Hem</p>
+            <p className="mb-[18px]">Aktuellt</p>
+            <p className="mb-[18px]">Om oss</p>
+            <p className="mb-[18px]">Kontakt</p>
           </div>
         </div>
       </div>
