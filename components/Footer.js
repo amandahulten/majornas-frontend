@@ -37,13 +37,33 @@ const Footer = () => {
             </div>
           </div>
           <div className="md:flex md:flex-row-reverse w-[40%] md:justify-between md:mb-[50px]">
-            <div className="text-whiteish mt-[50px]  mr-[20px]">
-              <p>Tis - Fre</p>
-              <p className="font-bold">11:00 - 18:00</p>
-              <p className="mt-[18px]">Lör</p>
-              <p className="font-bold">11:00 - 15:00</p>
-              <p className="mt-[18px]">Sön - Mån</p>
-              <p className="font-bold">Stängt</p>
+            <div className="text-whiteish mt-[50px]  mr-[20px] lg:hidden">
+              <div>
+                <p className="mr-[25px]">Tis - Fre</p>
+                <p className="font-bold">11:00 - 18:00</p>
+              </div>
+              <div>
+                <p className="mt-[18px] mr-[25px]">Lör</p>
+                <p className="font-bold">11:00 - 15:00</p>
+              </div>
+              <div>
+                <p className="mt-[18px] mr-[25px]">Sön - Mån</p>
+                <p className="font-bold">Stängt</p>
+              </div>
+            </div>
+            <div className="text-whiteish mt-[50px] mr-[20px] hidden lg:flex lg:block">
+              <div className="text-right mr-[20px]">
+                <p className="mb-[18px]">Tis - Fre</p>
+                <p className="mb-[18px]">Lör</p>
+                <p className="mb-[18px]">Sön</p>
+                <p className="mb-[50px]">Mån</p>
+              </div>
+              <div>
+                <p className="font-bold mb-[18px]">11:00 - 18:00</p>
+                <p className="font-bold mb-[18px]">11:00 - 15:00</p>
+                <p className="font-bold mb-[18px]">Stängt</p>
+                <p className="font-bold mb-[18px]">Stängt</p>
+              </div>
             </div>
             <div className="text-whiteish mt-[50px]">
               <p className="mb-[18px]">Hem</p>
