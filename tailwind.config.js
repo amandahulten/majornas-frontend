@@ -5,6 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      h1: ["Courier"],
+    },
     extend: {
       colors: {
         whiteish: "#F8F5EA",
