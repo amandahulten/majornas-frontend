@@ -7,7 +7,7 @@ const Home = () => {
         <title>Majornas böcker & kaffe</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-3xl">firstpage</h1>
+      {/* <h1 className="text-3xl">firstpage</h1> */}
     </div>
   );
 };
