@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "DM-serif";
+  src: url("../public/fonts/DMSerifText-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Courier-prime";
+  src: url("../public/fonts/CourierPrime-Regular.woff2");
+}

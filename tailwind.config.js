@@ -9,7 +9,9 @@ module.exports = {
   theme: {
     fontFamily: {
       h1: ["Courier"],
+      sans: ["Inter", ...defaultTheme.fontFamily.sans],
     },
+
     extend: {
       colors: {
         whiteish: "#F8F5EA",
