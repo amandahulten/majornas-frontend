@@ -1,6 +1,8 @@
 import Image from "next/image";
+
 import Openings from "../components/Openings";
 import Contact from "../components/Contact";
+
 import MailIcon from "../components/svgs/Mail";
 import PhoneIcon from "../components/svgs/Phone";
 
@@ -8,8 +10,6 @@ const Contact = () => {
   return (
     <div>
       <h1 className="font-bold text-3xl mb-4">KONTAKT</h1>
-
-      <Openings />
 
       <div>
         <Image
@@ -21,7 +21,10 @@ const Contact = () => {
       </div>
 
       <div>
+   
+
         <Contact />
+
         <div className="w-[251px] h-[241px] bg-black"></div>
       </div>
     </div>
