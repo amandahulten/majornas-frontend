@@ -1,7 +1,7 @@
 const Openings = ({ className }) => {
   return (
     <div className={`bg-temp-päron p-4 ${className}`}>
-      <h2 className="text-xl mb-3 font-semibold">Öppettider</h2>
+      <h2 className="text-xl md:text-2xl mb-3 font-semibold">Öppettider</h2>
       <div className="flex md:hidden justify-between">
         <div className="flex flex-col gap-2">
           <p>Tisdag - Fredag</p>

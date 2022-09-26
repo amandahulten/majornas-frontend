@@ -19,7 +19,7 @@ const Home = () => {
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-4 lg:grid-rows-3 gap-4">
-          <div className="relative md:col-span-4 md:row-span-2 lg:col-span-2">
+          <div className="relative h-72 md:h-auto md:col-span-4 md:row-span-2 lg:col-span-2">
             <Image
               src="/store.png"
               alt="Hejsan"
@@ -65,7 +65,7 @@ const Home = () => {
           </div>
 
           <div className="bg-black-coffee md:col-span-6 lg:col-span-2 lg:row-span-2 lg:col-start-3 lg:row-start-2 md:flex flex-row-reverse">
-            <div className="relative md:w-[50%]">
+            <div className="relative h-80 md:h-auto md:w-[50%]">
               <Image
                 src="/boktips.png"
                 alt="hej"
