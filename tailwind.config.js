@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       h1: ["Courier"],
+      DMSerif: ["DM Serif Text"],
     },
     extend: {
       colors: {
@@ -23,6 +24,7 @@ module.exports = {
         "temp-yellow": "#D1D7DF",
 
         illustration: "#F5D8C6",
+        hembakad: "#4E4247",
       },
     },
   },
