@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Instagram from "../components/Instagram";
 import { images } from "../next.config";
+import getInstaImages from "../queries/getInstaImages";
 
-export const About = (feed) => {
-  console.log(feed.feed.data);
-  const images = feed.feed.data;
+export const About = ({ feed }) => {
+  console.log(feed);
   return (
     <div>
       <title>Majornas böcker & kaffe</title>
@@ -31,29 +31,29 @@ export const About = (feed) => {
           per conubia nostra, per inceptos himenaeos.
         </p>
       </div>
-      <div className="md:grid md:grid-cols-2">
-        <div>
-          <img
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-4">
+        <div className="relative md:col-start-1 md:row-span-4 hidden md:block mt-4 md:pr-4">
+          <Image
             src="/about-book-2.png"
-            className="hidden md:block w-full mt-4 md:pr-4"
-          />
+            layout="fill"
+            objectFit="cover"
+            alt="books"
+          ></Image>
         </div>
-        <div>
-          <div className="bg-temp-ey mt-4 font-DMSerif text-[56px] md:text-[32px] text-hembakad leading-none p-4">
-            ALLTID HEMBAKAD FIKA TILL KAFFET
-            <div className="w-full text-center">
-              <Image
-                src="/muffin-spoon.svg"
-                width="231"
-                height="218"
-                alt="muffin and spoon"
-              ></Image>
-            </div>
+        <div className="md:row-span-3 md:col-start-2 md:row-start-1 bg-temp-ey mt-4 font-DMSerif text-[56px] md:text-[32px] text-hembakad leading-none p-4">
+          ALLTID HEMBAKAD FIKA TILL KAFFET
+          <div className="w-full text-center">
+            <Image
+              src="/muffin-spoon.svg"
+              width="231"
+              height="218"
+              alt="muffin and spoon"
+            ></Image>
           </div>
-          <div className="bg-tumbleweed mt-4 p-4 flex justify-center">
-            <div className="font-h1 underline mr-4">Hitta hit</div>
-            <div>&#8594;</div>
-          </div>
+        </div>
+        <div className="md:row-span-1 md:row-start-4 md:col-start-2 bg-tumbleweed p-4 flex justify-center">
+          <div className="font-h1 underline mr-4">Hitta hit</div>
+          <div>&#8594;</div>
         </div>
       </div>
       <div className="md:grid md:grid-cols-2 h-[300px] overflow-hidden">
@@ -81,15 +81,8 @@ export const About = (feed) => {
         </div>
       </div>
       <div className="mt-4 mb-4">Instagram</div>
-      <Instagram></Instagram>
-      <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-        {images &&
-          images.slice(0, 4).map((image) => (
-            <div key={image.id}>
-              <img src={image.media_url} alt={image.caption} />
-            </div>
-          ))}
-      </div>
+      <Instagram feed={feed}></Instagram>
+
       <div className="pb-12">
         <p className="text-right">Följ Oss</p>
       </div>
@@ -100,9 +93,7 @@ export const About = (feed) => {
 export default About;
 
 export const getStaticProps = async () => {
-  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-  const data = await fetch(url);
-  const feed = await data.json();
+  const feed = await getInstaImages();
   console.log(feed);
 
   return {
