@@ -13,18 +13,25 @@ const Nav = () => {
 
   return (
     <div className="fixed w-full h-24 flex justify-start items-center bg-whiteish">
-      <div className="pl-4 flex items-center">
-        <Image src="/logo-dark.png" alt="logo" height="75" width="190" />
+      <div className="flex pt-4 md:pt-8 lg:pt-20 items-center">
+        <div className="relative h-32 w-64  md:h-36 md:w-72 lg:h-40 lg:w-96">
+          <Image
+            src="/logo-dark.png"
+            alt="logo"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </div>
-      <div className="absolute flex right-6  ">
+      <div className="absolute flex right-6">
         <div className="scale-150">
           <AiOutlineMenu
             onClick={openHamburgerMenu}
-            className="scale-150 cursor-pointer md:hidden"
+            className="scale-150 cursor-pointer lg:hidden"
           />
         </div>
-        <div className="hidden md:flex items-center ">
-          <ul className="hidden md:flex lg:gap-40 lg:pr-8 gap-28 pr-4">
+        <div className="hidden lg:flex items-center ">
+          <ul className="hidden md:flex xl:gap-44 lg:gap-38 lg:pr-8 md:gap-32  pr-4">
             <li className="hover:font-medium hover:underline ">
               <Link href="/hem">Hem</Link>
             </li>

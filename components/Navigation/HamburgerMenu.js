@@ -8,16 +8,23 @@ const HamburgerMenu = ({ openHamburgerMenu, hamburgerMenuOpen }) => {
     <div
       className={
         hamburgerMenuOpen
-          ? "flex-col flex items-center fixed w-full  text-whiteish justify-center md:hidden"
+          ? "flex-col flex items-center fixed w-full text-whiteish justify-center  lg:hidden"
           : "hidden"
       }
     >
       <div className="fixed w-full h-24 flex-row justify-between items-center bg-black-coffee">
-        <div className="pl-4 h-24 flex items-center">
-          <Image src="/logo-light.png" alt="logo" height="75" width="190" />
+        <div className="h-24 pt-4 md:pt-8 flex items-center">
+          <div className="relative h-32 w-64 md:h-36 md:w-72 ">
+            <Image
+              src="/logo-light.png"
+              alt="logo"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
         </div>
         <div className="bg-[url('../public/nav-background.svg')] pr-8">
-          <div className="absolute right-6 top-10 scale-150 md:hidden flex ">
+          <div className="absolute right-6 top-10 scale-150 lg:hidden flex ">
             <AiOutlineClose
               onClick={openHamburgerMenu}
               className="scale-150 cursor-pointer"
