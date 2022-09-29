@@ -12,9 +12,9 @@ const Nav = () => {
   };
 
   return (
-    <div className="fixed w-full h-24 flex justify-start items-center bg-whiteish">
-      <div className="flex pt-4 md:pt-8 lg:pt-12 items-center">
-        <div className="relative h-32 w-64  md:h-36 md:w-72 lg:h-40 lg:w-80">
+    <div className="w-full h-36 flex justify-start items-center bg-whiteish">
+      <div className="flex items-center">
+        <div className="relative h-32 w-64 md:h-36 md:w-72 lg:h-40 lg:w-80">
           <Image
             src="/logo-dark.png"
             alt="logo"
@@ -23,11 +23,8 @@ const Nav = () => {
           />
         </div>
       </div>
-      <div className="absolute flex right-6">
-        <div
-          onClick={openHamburgerMenu}
-          className="scale-100 cursor-pointer lg:hidden"
-        >
+      <div className="absolute flex right-6 items-center">
+        <div onClick={openHamburgerMenu} className="cursor-pointer lg:hidden">
           <Lines className="cursor-pointer" />
         </div>
         <div className="hidden lg:flex items-center text-base">

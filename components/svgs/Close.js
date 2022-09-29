@@ -1,9 +1,9 @@
 const Close = () => {
   return (
     <svg
-      width="28"
-      height="29"
-      viewBox="0 0 28 29"
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

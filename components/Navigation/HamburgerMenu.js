@@ -8,12 +8,12 @@ const HamburgerMenu = ({ openHamburgerMenu, hamburgerMenuOpen }) => {
     <div
       className={
         hamburgerMenuOpen
-          ? "flex-col flex items-center fixed w-full text-whiteish justify-center  lg:hidden"
+          ? "flex-col flex z-50 items-center fixed w-full text-whiteish justify-center  lg:hidden"
           : "hidden"
       }
     >
-      <div className="fixed w-full h-24 flex-row justify-between items-center bg-black-coffee">
-        <div className="h-24 pt-4 md:pt-8 flex items-center">
+      <div className="fixed w-full h-36 flex-row justify-between items-center bg-black-coffee">
+        <div className="h-36 flex">
           <div className="relative h-32 w-64 md:h-36 md:w-72 ">
             <Image
               src="/logo-light.png"
@@ -26,7 +26,7 @@ const HamburgerMenu = ({ openHamburgerMenu, hamburgerMenuOpen }) => {
         <div className="bg-[url('../public/nav-background.svg')] pr-8">
           <div
             onClick={openHamburgerMenu}
-            className="absolute right-6 top-8 flex items-center"
+            className="absolute flex right-6 top-16"
           >
             <Close className="cursor-pointer" />
           </div>
