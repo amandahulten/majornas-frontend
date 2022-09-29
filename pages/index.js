@@ -87,7 +87,7 @@ const Home = () => {
               </div>
 
               <div className="flex justify-end gap-3 mb-4">
-                <Link href="/boktips">
+                <Link href="/blogg.js">
                   <a className="text-lg underline text-whiteish font-['Courier-prime']">
                     Läs mer
                   </a>
