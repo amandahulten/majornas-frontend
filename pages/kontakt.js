@@ -21,9 +21,7 @@ const Contact = () => {
       </div>
 
       <div>
-   
-
-        <Contact />
+        {/* <Contact /> */}
 
         <div className="w-[251px] h-[241px] bg-black"></div>
       </div>
