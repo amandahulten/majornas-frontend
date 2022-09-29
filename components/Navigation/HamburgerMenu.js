@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Close from "../svgs/Close";
 
 const HamburgerMenu = ({ openHamburgerMenu, hamburgerMenuOpen }) => {
   return (
@@ -24,13 +24,13 @@ const HamburgerMenu = ({ openHamburgerMenu, hamburgerMenuOpen }) => {
           </div>
         </div>
         <div className="bg-[url('../public/nav-background.svg')] pr-8">
-          <div className="absolute right-6 top-10 scale-150 lg:hidden flex ">
-            <AiOutlineClose
-              onClick={openHamburgerMenu}
-              className="scale-150 cursor-pointer"
-            />
+          <div
+            onClick={openHamburgerMenu}
+            className="absolute right-6 top-8 flex items-center"
+          >
+            <Close className="cursor-pointer" />
           </div>
-          <div className="pt-24 pb-36 h-screen">
+          <div className="pt-24 pb-36 h-screen text-base">
             <ul className="flex flex-col items-end ">
               <li className="p-4">
                 <Link href="/hem">Hem</Link>
