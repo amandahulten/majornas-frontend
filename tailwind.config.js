@@ -1,10 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      h1: ["Courier"],
+      sans: ["Inter", ...defaultTheme.fontFamily.sans],
+    },
+
     extend: {
       colors: {
         whiteish: "#F8F5EA",
@@ -13,7 +20,7 @@ module.exports = {
 
         "black-coffee": "#322A2E",
 
-        "temp-ey": "#E6814B",
+        "temp-ey": "#E3DCCA",
 
         "temp-päron": "#DCE7D3",
 
