@@ -13,3 +13,8 @@
     font-weight: bold;
     src: url("../assets/fonts/Courier_Prime/CourierPrime-Bold.ttf");
   }
+  
+@font-face {
+  font-family: "DM-serif";
+  src: url("../public/fonts/DMSerifText-Regular.woff2");
+}
