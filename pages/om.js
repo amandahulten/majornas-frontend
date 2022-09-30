@@ -9,7 +9,7 @@ export const About = ({ feed }) => {
     <div>
       <title>Majornas böcker & kaffe</title>
       <link rel="icon" href="/favicon.ico" />
-      <h1 className="text-3xl font-h1 mb-4">OM OSS</h1>
+      <h1>OM OSS</h1>
       <div className="md:hidden">
         <Image
           src="/about-book.png"

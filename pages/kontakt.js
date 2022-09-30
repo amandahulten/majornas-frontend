@@ -7,9 +7,7 @@ import Link from "next/link";
 const Kontakt = () => {
   return (
     <div className="pt-4 pb-12">
-      <h1 className="font-bold text-4xl md:text-5xl font-['Courier-prime'] pb-6">
-        KONTAKT
-      </h1>
+      <h1>KONTAKT</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-8 gap-4">
         <Openings className="md:row-start-1 md:row-span-3" />

@@ -16,7 +16,7 @@ const HamburgerMenu = ({ openHamburgerMenu, hamburgerMenuOpen }) => {
         <div className="h-36 flex">
           <div className="relative h-32 w-64 md:h-36 md:w-72 ">
             <Image
-              src="/logo-light.png"
+              src="/logo-light.svg"
               alt="logo"
               layout="fill"
               objectFit="cover"
@@ -33,13 +33,13 @@ const HamburgerMenu = ({ openHamburgerMenu, hamburgerMenuOpen }) => {
           <div className="pt-24 pb-36 h-screen text-base">
             <ul className="flex flex-col items-end ">
               <li className="p-4">
-                <Link href="/hem">Hem</Link>
+                <Link href="/">Hem</Link>
               </li>
               <li className="p-4">
                 <Link href="/aktuellt">Aktuellt</Link>
               </li>
               <li className="p-4">
-                <Link href="/om-oss">Om oss</Link>
+                <Link href="/om">Om oss</Link>
               </li>
               <li className="p-4">
                 <Link href="/kontakt">Kontakt</Link>

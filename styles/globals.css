@@ -3,18 +3,16 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "CourierPrime";
-    font-weight: normal;
-    src: url("../assets/fonts/Courier_Prime/CourierPrime-Regular.ttf");
-  }
+  font-family: "CourierPrime";
+  font-weight: normal;
+  src: url("../assets/fonts/Courier_Prime/CourierPrime-Regular.ttf");
+}
 
-  @font-face {
-    font-family: "CourierPrime";
-    font-weight: bold;
-    src: url("../assets/fonts/Courier_Prime/CourierPrime-Bold.ttf");
-  }
-  
 @font-face {
   font-family: "DM-serif";
   src: url("../public/fonts/DMSerifText-Regular.woff2");
+}
+
+h1 {
+  @apply text-4xl lg:text-6xl font-bold font-courier-prime uppercase pt-8 text-black-coffee;
 }

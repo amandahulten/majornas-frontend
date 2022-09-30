@@ -8,8 +8,6 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      h1: ["Courier"],
-      DMSerif: ["DM Serif Text"],
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
     },
 

@@ -7,12 +7,14 @@ const Footer = () => {
       <div className="bg-[url('../public/bg-footer-desktop.svg')]">
         <div className="md:flex md:justify-between md:pt-[50px] md:px-8 lg:ml-[100px]">
           <div>
-            <p className="text-[32px] text-whiteish text-center font-h1">
-              majorna
-            </p>
-            <p className="text-[32px] text-whiteish text-center font-h1">
-              bokhandel & kaffe
-            </p>
+            <div className="relative h-32 w-64 md:h-36 md:w-72 ">
+              <Image
+                src="/logo-light.svg"
+                alt="logo"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
             <div className="flex justify-center w-full mt-[39px]">
               <div className="flex justify-between w-[160px]">
                 <div className="text-center">

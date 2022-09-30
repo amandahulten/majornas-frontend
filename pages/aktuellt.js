@@ -11,9 +11,7 @@ const Home = ({ data }) => {
         <title>Aktuellt</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-5xl lg:text-8xl font-bold font-courier-prime">
-        Aktuellt
-      </h1>
+      <h1>AKTUELLT</h1>
       <div className="grid md:grid-cols-3 gap-2">
         {data.comingEvents.map((event) => (
           <PreviewCard event={event} key={event._id} />

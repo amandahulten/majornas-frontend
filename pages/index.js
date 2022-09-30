@@ -16,7 +16,7 @@ const Home = ({ feed }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="pb-4 sm:px-20 md:px-0">
-        <h1 className="text-4xl py-4 md:text-5xl font-bold font-['Courier-prime']">
+        <h1>
           OBEROENDE BOKHANDEL <br /> MED KAFFEHÄNG
         </h1>
 
@@ -58,9 +58,7 @@ const Home = ({ feed }) => {
             </p>
             <div className="flex justify-end gap-3 items-center">
               <Link href="/aktuellt">
-                <a className="text-lg underline font-['Courier-prime']">
-                  Aktuellt
-                </a>
+                <a className="text-lg underline font-courier-prime">Aktuellt</a>
               </Link>
               <Arrow color="#000" />
             </div>
@@ -90,7 +88,7 @@ const Home = ({ feed }) => {
 
               <div className="flex justify-end gap-3 mb-4">
                 <Link href="/boktips">
-                  <a className="text-lg underline text-whiteish font-['Courier-prime']">
+                  <a className="text-lg underline text-whiteish font-courier-prime">
                     Läs mer
                   </a>
                 </Link>
@@ -106,7 +104,7 @@ const Home = ({ feed }) => {
             </h3>
             <div className="md:flex justify-end items-center gap-3 hidden ">
               <Link href="/">
-                <a className="text-lg lg:text-2xl underline font-['Courier-prime']">
+                <a className="text-lg lg:text-2xl underline font-courier-prime">
                   Följ Oss
                 </a>
               </Link>
@@ -116,15 +114,12 @@ const Home = ({ feed }) => {
           <Instagram feed={feed} />
           <div className="flex md:hidden justify-end items-center gap-3 mt-4">
             <Link href="/">
-              <a className="text-lg underline font-['Courier-prime']">
-                Följ Oss
-              </a>
+              <a className="text-lg underline font-courier-prime">Följ Oss</a>
             </Link>
             <Arrow color="#000" />
           </div>
         </div>
       </div>
-
     </div>
   );
 };

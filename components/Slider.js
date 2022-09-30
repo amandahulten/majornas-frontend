@@ -93,7 +93,7 @@ const Slider = ({ events }) => {
               {x.typ}: {x.author}
             </p>
           </div>
-          <Link href={x.slug}>
+          <Link href={"/event/" + x.slug}>
             <a>
               <RightArrowIcon className="w-8 flex-1 text-black-coffee" />
             </a>

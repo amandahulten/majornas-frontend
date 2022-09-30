@@ -16,7 +16,7 @@ const PreviewCard = ({ event }) => {
           <div className="mt-2">
             <p className="line-clamp-6 md:line-clamp-1">{body}</p>
           </div>
-          <Link href={slug}>
+          <Link href={"/event/" + slug}>
             <a className="mt-auto flex gap-2 w-full justify-end items-center h-full">
               <p className="text-xl font-courier-prime font-bold underline">
                 Läs mer
