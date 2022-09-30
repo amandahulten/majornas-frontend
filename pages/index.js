@@ -124,6 +124,7 @@ const Home = ({ feed }) => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };
