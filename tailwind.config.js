@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -8,7 +10,9 @@ module.exports = {
     fontFamily: {
       h1: ["Courier"],
       DMSerif: ["DM Serif Text"],
+      sans: ["Inter", ...defaultTheme.fontFamily.sans],
     },
+
     extend: {
       colors: {
         whiteish: "#F8F5EA",
