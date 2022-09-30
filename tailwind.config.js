@@ -30,8 +30,11 @@ module.exports = {
         illustration: "#F5D8C6",
         hembakad: "#4E4247",
       },
+      fontFamily: {
+        "courier-prime": "CourierPrime",
+      },
     },
   },
 
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
