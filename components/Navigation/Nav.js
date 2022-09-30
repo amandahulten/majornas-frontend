@@ -27,7 +27,7 @@ const Nav = () => {
         <div onClick={openHamburgerMenu} className="cursor-pointer lg:hidden">
           <Lines className="cursor-pointer" />
         </div>
-        <div className="hidden lg:flex items-center text-base">
+        <div className="hidden lg:flex items-center text-xl">
           <ul className="hidden md:flex xl:gap-44 lg:gap-38 lg:pr-8 md:gap-32  pr-4">
             <li className="hover:font-medium hover:underline ">
               <Link href="/hem">Hem</Link>

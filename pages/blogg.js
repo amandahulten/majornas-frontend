@@ -6,15 +6,15 @@ import Back from "../components/svgs/Back";
 const Posts = () => {
   return (
     <div className="relative flex flex-col content-center pt-4">
-      <div className="relative w-full h-screen">
-        <Image src="/bok.png" layout="fill" objectFit="cover"></Image>
+      <div className="relative w-full h-96 lg:h-screen">
+        <Image src="/blogg.png" layout="fill" objectFit="cover"></Image>
       </div>
       <div className="pt-4">
         <h2 className=" uppercase font-['Courier-prime'] text-5xl">
           Jag ser allt du gör
         </h2>
         <h4 className="text-2xl	pt-4">27/10/2022</h4>
-        <p className="text-lg w-2/3	pt-4 pb-8">
+        <p className="text-lg w-full lg:w-2/3	pt-4 pb-8">
           Vårt boktips denna veckan är “Jag ser allt du gör” av Annika Norlin.
           På vägen mellan Jokkmokk och Kåbdalis, i skuggan av den största sorgen
           man kan bära, börjar en sång växa fram. Inget märkvärdigt, fem strofer
@@ -31,8 +31,8 @@ const Posts = () => {
           i sin musik." - Annah Björk, Bäst just nu i Svenska Dagbladet
         </p>
 
-        <div className="flex underline font-['Courier-prime'] gap-4 pb-8 cursor-pointer">
-          <div className="flex items-center text-center gap-2">
+        <div className="flex underline font-['Courier-prime'] gap-8 md:gap-4 pb-8 ">
+          <div className="flex flex-col md:flex-row  items-center text-center gap-2 cursor-pointer">
             <Image
               src="/logo-insta-dark.svg"
               alt="instagram-logo"
@@ -40,23 +40,23 @@ const Posts = () => {
               width="30"
               fill="#000"
             />
-            <p>Dela</p>
+            <p className="cursor-pointer">Dela</p>
           </div>
-          <div className="flex items-center text-center  gap-2">
+          <div className="flex flex-col md:flex-row items-center text-center  gap-2 cursor-pointer">
             <Image
               src="/logo-fb-dark.svg"
               alt="facebook-logo"
               height="30"
               width="30"
             />
-            <p>Dela</p>
+            <p className="cursor-pointer">Dela</p>
           </div>
-          <div className="flex items-center text-center  gap-2">
+          <div className="flex flex-col md:flex-row items-center text-center  gap-2 cursor-pointer">
             <Image src="/copy.svg" alt="copy-logo" height="30" width="30" />
-            <p>Kopiera länk</p>
+            <p className="cursor-pointer">Kopiera</p>
           </div>
         </div>
-        <div className="flex font-bold gap-4 w-2/3 pb-12">
+        <div className="flex font-bold  gap-4 w-full lg:w-2/3 pb-12">
           <div className="flex justify-center items-center gap-3 h-16 w-1/2 lg:w-full bg-temp-ey text-black-coffee">
             <Back color="#322A2E" />
             <Link href="/">
