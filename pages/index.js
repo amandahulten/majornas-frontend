@@ -5,8 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Arrow from "../components/svgs/Arrow";
 import Coffee from "../components/svgs/Coffee";
+import getInstaImages from "../queries/getInstaImages";
+import Instagram from "../components/Instagram";
 
-const Home = () => {
+const Home = ({ feed }) => {
   return (
     <div>
       <Head>
@@ -97,6 +99,30 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="my-4 lg:my-12">
+          <div className="md:my-4 lg:my-8 md:flex justify-between items-center">
+            <h3 className="text-xl md:text-3xl lg:text-4xl my-4 md:my-0">
+              Instagram
+            </h3>
+            <div className="md:flex justify-end items-center gap-3 hidden ">
+              <Link href="/">
+                <a className="text-lg lg:text-2xl underline font-['Courier-prime']">
+                  Följ Oss
+                </a>
+              </Link>
+              <Arrow color="#000" />
+            </div>
+          </div>
+          <Instagram feed={feed} />
+          <div className="flex md:hidden justify-end items-center gap-3 mt-4">
+            <Link href="/">
+              <a className="text-lg underline font-['Courier-prime']">
+                Följ Oss
+              </a>
+            </Link>
+            <Arrow color="#000" />
+          </div>
+        </div>
       </div>
 
     </div>
@@ -104,3 +130,14 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getStaticProps = async () => {
+  const feed = await getInstaImages();
+  console.log(feed);
+
+  return {
+    props: {
+      feed,
+    },
+  };
+};
