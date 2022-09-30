@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import Openings from "../components/Openings";
 import Contact from "../components/Contact";
+import Link from "next/link";
 
 const Kontakt = () => {
   return (
@@ -26,7 +27,13 @@ const Kontakt = () => {
           display="md:hidden"
         />
 
-        <div className="w-full h-80 bg-black md:row-start-4 md:row-span-4"></div>
+        <div className="w-full h-80 bg-black md:row-start-4 md:row-span-4 relative">
+          <Link href="https://www.google.se/maps/place/Allm%C3%A4nna+v%C3%A4gen+22,+414+60+G%C3%B6teborg/@57.697442,11.9268178,16z/data=!4m5!3m4!1s0x464ff3484c99eba3:0x7fa4782120b55e0!8m2!3d57.696988!4d11.9304078?hl=sv">
+            <a target="_blank">
+              <Image src="/google-maps.png" layout="fill" objectFit="cover" />
+            </a>
+          </Link>
+        </div>
       </div>
     </div>
   );
