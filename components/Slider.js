@@ -2,10 +2,16 @@ import headshot from "../assets/headshot.jpg";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import CalendarIcon from "../assets/icons/CalendarIcon";
+import RightArrowIcon from "../assets/icons/RightArrowIcon";
+import Link from "next/link";
 
 const Slider = ({ events }) => {
   const images = [...events].map((x) => {
-    return { ...x, time: setDate(x.publishedAt) };
+    return {
+      ...x,
+      time: setDate(x.publishedAt),
+      typ: setEventType(x.eventType),
+    };
   });
   const delay = 3000;
   const [active, setActive] = useState(0);
@@ -19,6 +25,15 @@ const Slider = ({ events }) => {
       day: "numeric",
       month: "numeric",
     });
+  }
+
+  function setEventType(eventType) {
+    switch (eventType) {
+      case "authorEvening":
+        return "Författarkväll";
+      case "bookcircle":
+        return "Bokcirkel";
+    }
   }
 
   function resetTimeout() {
@@ -55,29 +70,36 @@ const Slider = ({ events }) => {
   };
 
   return (
-    <div className="grid grid-cols-3">
-      <div className="aspect-video relative w-full">
+    <div className="grid md:grid-cols-2 md:grid-rows-5 gap-2">
+      <div className="aspect-video md:aspect-square lg:aspect-video relative w-full md:row-span-5">
         <Image src={images[active].imageUrl} layout="fill" objectFit="cover" />
       </div>
-      <div className="flex flex-col gap-2">
-        {images.map((x, i) => (
-          <div
-            key={i}
-            data-id={i}
-            onMouseEnter={() => mouseIn(i)}
-            onMouseLeave={mouseOut}
-            className={`w-full p-2 text-left ${
-              active !== i ? "bg-temp-ey" : "bg-tumbleweed"
-            }`}
-          >
-            <div className="flex gap-2">
-              <CalendarIcon className="w-2 aspect-square" />
-              <time dateTime={x.time}>{x.time}</time>
+      {images.map((x, i) => (
+        <div
+          key={i}
+          data-id={i}
+          onMouseEnter={() => mouseIn(i)}
+          onMouseLeave={mouseOut}
+          className={`w-full h-full px-2 py-2 md:py-0 flex justify-between items-center ${
+            active !== i ? "bg-temp-ey" : "bg-tumbleweed"
+          }`}
+        >
+          <div className="text-black-coffee text-xl">
+            <div className="flex gap-2 font-bold">
+              <CalendarIcon className="w-5 aspect-square" />
+              <time dateTime={x.publishedAt}>{x.time}</time>
             </div>
-            {x.author}
+            <p>
+              {x.typ}: {x.author}
+            </p>
           </div>
-        ))}
-      </div>
+          <Link href={x.slug}>
+            <a>
+              <RightArrowIcon className="w-8 flex-1 text-black-coffee" />
+            </a>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 };
