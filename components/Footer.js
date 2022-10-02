@@ -18,7 +18,7 @@ const Footer = () => {
                 />
               </Link>
             </div>
-            <div className="flex justify-start ml-8 md:m-0 md:justify-center w-full mt-[39px]">
+            <div className="flex justify-start md:m-0 pl-8 md:justify-center w-full mt-[39px]">
               <div className="flex justify-between w-[160px]">
                 <div className="text-center">
                   <Image
