@@ -60,7 +60,7 @@ const Home = ({ feed }) => {
               <Link href="/aktuellt">
                 <a className="text-lg underline font-courier-prime">Aktuellt</a>
               </Link>
-              <Arrow color="#000" />
+              <Arrow color="#322A2E" />
             </div>
           </div>
 
@@ -111,7 +111,7 @@ const Home = ({ feed }) => {
                   Följ Oss
                 </a>
               </Link>
-              <Arrow color="#000" />
+              <Arrow color="#322A2E" />
             </div>
           </div>
           <Instagram feed={feed} />
@@ -119,7 +119,7 @@ const Home = ({ feed }) => {
             <Link href="/">
               <a className="text-lg underline font-courier-prime">Följ Oss</a>
             </Link>
-            <Arrow color="#000" />
+            <Arrow color="#322A2E" />
           </div>
         </div>
       </div>
