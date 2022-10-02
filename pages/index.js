@@ -13,9 +13,9 @@ const Home = ({ feed }) => {
     <div>
       <Head>
         <title>Majornas böcker & kaffe</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="pb-4 sm:px-20 md:px-0">
+      <div className="pb-4 max-w-screen-xl mx-auto">
         <h1>
           OBEROENDE BOKHANDEL <br /> MED KAFFEHÄNG
         </h1>
@@ -103,8 +103,11 @@ const Home = ({ feed }) => {
               Instagram
             </h3>
             <div className="md:flex justify-end items-center gap-3 hidden ">
-              <Link href="/">
-                <a className="text-lg lg:text-2xl underline font-courier-prime">
+              <Link href="https://www.instagram.com/majornasbocker/">
+                <a
+                  className="text-lg lg:text-2xl underline font-courier-prime"
+                  target="_blank"
+                >
                   Följ Oss
                 </a>
               </Link>
@@ -128,7 +131,6 @@ export default Home;
 
 export const getStaticProps = async () => {
   const feed = await getInstaImages();
-  console.log(feed);
 
   return {
     props: {
