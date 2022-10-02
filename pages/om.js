@@ -24,9 +24,9 @@ export const About = ({ feed }) => {
             alt="books"
           ></Image>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-7 gap-4">
-          <div className="md:row-span-2 md:col-start-1 md:col-span-2 md:row-start-1 w-full bg-temp-päron text-black-coffee p-4 lg:p-8">
-            <p className="font-bold lg:hidden mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-7 gap-4 md:mt-4 lg:grid-cols-5 lg:gap-0">
+          <div className="md:row-span-2 md:col-start-1 md:col-span-2 md:row-start-1 lg:col-span-3 lg:col-start-3 lg:border-b-8 lg:border-l-8 border-whiteish z-10 w-full bg-temp-päron text-black-coffee p-4 lg:p-8">
+            <p className="font-bold lg:hidden mb-4 md:text-xl">
               Oberoende bokhandel med med härligt kaffehäng!
             </p>
             <p className="font-bold hidden lg:block mb-4">
@@ -47,7 +47,7 @@ export const About = ({ feed }) => {
             </p>
           </div>
 
-          <div className="relative md:col-start-1 md:row-span-6 md:row-start-3 hidden md:block md:pr-4 md:mb-4">
+          <div className="relative md:col-start-1 md:row-span-6 md:row-start-3 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:row-span-5 hidden md:block md:pr-4 md:mb-4 lg:mb-0">
             <Image
               src="/about-book-2.png"
               layout="fill"
@@ -55,7 +55,7 @@ export const About = ({ feed }) => {
               alt="books"
             ></Image>
           </div>
-          <div className="md:row-span-4 md:col-start-2 md:row-start-3 bg-temp-ey font-serif text-[56px] md:text-[32px] text-hembakad leading-none p-4">
+          <div className="md:row-span-4 md:col-start-2 md:row-start-3 lg:col-span-1 lg:col-start-5 lg:mb-2 lg:ml-2 bg-temp-ey font-serif text-[56px] md:text-[32px] text-hembakad leading-none p-4">
             ALLTID HEMBAKAD FIKA TILL KAFFET
             <div className="w-full text-center">
               <Image
@@ -66,7 +66,7 @@ export const About = ({ feed }) => {
               ></Image>
             </div>
           </div>
-          <div className="md:row-span-1 md:row-start-7 md:col-start-2 bg-tumbleweed p-4 flex justify-center">
+          <div className="md:row-span-1 md:row-start-7 md:col-start-2 lg:col-start-1 lg:col-span-4 lg:row-start-6 lg:mb-2 lg:mt-2 bg-tumbleweed p-4 flex justify-center">
             <div className="mr-4">
               <Link href="/kontakt">
                 <a className="text-lg underline font-courier-prime">
