@@ -8,7 +8,7 @@ import Arrow from "../components/svgs/Arrow";
 export const About = ({ feed }) => {
   console.log(feed);
   return (
-    <div>
+    <div className="pb-12">
       <Head>
         <title>Om oss</title>
         <link rel="icon" href="/favicon.png" />
@@ -117,11 +117,28 @@ export const About = ({ feed }) => {
             ></Image>
           </div>
         </div>
-        <div className="mt-4 mb-4">Instagram</div>
+        <div className="md:my-4 lg:my-8 md:flex justify-between items-center">
+          <h3 className="text-xl md:text-3xl lg:text-4xl my-4 md:my-0">
+            Instagram
+          </h3>
+          <div className="md:flex justify-end items-center gap-3 hidden ">
+            <Link href="https://www.instagram.com/majornasbocker/">
+              <a
+                className="text-lg lg:text-2xl underline font-courier-prime"
+                target="_blank"
+              >
+                Följ Oss
+              </a>
+            </Link>
+            <Arrow color="#000" />
+          </div>
+        </div>
         <Instagram feed={feed}></Instagram>
-
-        <div className="pb-12">
-          <p className="text-right">Följ Oss</p>
+        <div className="flex md:hidden justify-end items-center gap-3 mt-4">
+          <Link href="/">
+            <a className="text-lg underline font-courier-prime">Följ Oss</a>
+          </Link>
+          <Arrow color="#000" />
         </div>
       </div>
     </div>
