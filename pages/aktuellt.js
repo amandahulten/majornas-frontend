@@ -35,7 +35,7 @@ const Home = ({ data }) => {
             </p>
             <p>Nedan ser du våra författare från tidigare besök.</p>
           </article>
-          <Books className="aspect-square w-1/2 mx-auto hidden md:relative" />
+          <Books className="aspect-square w-1/2 mx-auto hidden md:block" />
         </div>
         <h2 className="font-bold text-4xl text-black-coffee">
           Tidigare författarbesök
