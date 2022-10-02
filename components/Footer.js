@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <div className="h-[20px] bg-black-coffee"></div>
       <div className="bg-[url('../public/bg-footer-desktop.svg')]">
-        <div className="md:flex md:justify-between md:pt-[50px] md:px-8 lg:ml-[100px]">
+        <div className="md:flex md:justify-between md:pt-[50px] md:px-8">
           <div>
             <div className="relative h-32 w-64 md:h-36 md:w-72 ">
               <Link href="/">
@@ -18,7 +18,7 @@ const Footer = () => {
                 />
               </Link>
             </div>
-            <div className="flex justify-center w-full mt-[39px]">
+            <div className="flex justify-start md:m-0 pl-8 md:justify-center w-full mt-[39px]">
               <div className="flex justify-between w-[160px]">
                 <div className="text-center">
                   <Image
@@ -41,7 +41,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="px-4 pb-4 md:flex md:flex-row-reverse w-[50%] md:justify-between md:mb-[50px] lg:mr-[100px]">
+          <div className="px-4 pb-4 ml-8 md:ml-0 md:flex md:flex-row-reverse w-[50%] md:justify-between md:mb-[50px] lg:mr-[100px]">
             <div className="text-whiteish mt-12 mr-[20px] lg:hidden">
               <div>
                 <p className="mr-[25px]">Tis - Fre</p>
@@ -71,10 +71,20 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-whiteish mt-[50px] lg:ml-[50px]">
-              <p className="mb-4">Hem</p>
-              <p className="mb-4">Aktuellt</p>
-              <p className="mb-4">Om oss</p>
-              <p className="mb-[50px]">Kontakt</p>
+              <ul>
+                <li className="mb-4">
+                  <Link href="/">Hem</Link>
+                </li>
+                <li className="mb-4">
+                  <Link href="/aktuellt">Aktuellt</Link>
+                </li>
+                <li className="mb-4">
+                  <Link href="/om">Om oss</Link>
+                </li>
+                <li className="mb-[50px]">
+                  <Link href="/kontakt">Kontakt</Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

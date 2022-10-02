@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      serif: ["DM-Serif"],
     },
 
     extend: {

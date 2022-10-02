@@ -1,90 +1,147 @@
+import Head from "next/head";
 import Image from "next/image";
 import Instagram from "../components/Instagram";
-import { images } from "../next.config";
 import getInstaImages from "../queries/getInstaImages";
+import Link from "next/link";
+import Arrow from "../components/svgs/Arrow";
 
 export const About = ({ feed }) => {
   console.log(feed);
   return (
-    <div>
-      <title>Majornas böcker & kaffe</title>
-      <link rel="icon" href="/favicon.ico" />
-      <h1>OM OSS</h1>
-      <div className="md:hidden">
-        <Image
-          src="/about-book.png"
-          width="343"
-          layout="responsive"
-          height="226"
-          alt="books"
-        ></Image>
-      </div>
-      <div className="w-full bg-temp-päron text-black-coffee p-4 mt-4">
-        <p className="font-bold mb-4">
-          Oberoende bokhandel med med härligt kaffehäng!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis. Class
-          aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-4">
-        <div className="relative md:col-start-1 md:row-span-4 hidden md:block mt-4 md:pr-4">
+    <div className="pb-12">
+      <Head>
+        <title>Om oss</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <div>
+        <h1>OM OSS</h1>
+        <div className="md:hidden">
           <Image
-            src="/about-book-2.png"
-            layout="fill"
-            objectFit="cover"
+            src="/about-book.png"
+            width="343"
+            layout="responsive"
+            height="226"
             alt="books"
           ></Image>
         </div>
-        <div className="md:row-span-3 md:col-start-2 md:row-start-1 bg-temp-ey mt-4 font-DMSerif text-[56px] md:text-[32px] text-hembakad leading-none p-4">
-          ALLTID HEMBAKAD FIKA TILL KAFFET
-          <div className="w-full text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-7 gap-4 md:mt-4 lg:grid-cols-5 lg:gap-0">
+          <div className="md:row-span-2 md:col-start-1 md:col-span-2 md:row-start-1 lg:col-span-3 lg:col-start-3 lg:border-b-8 mt-4 lg:mt-0 lg:border-l-8 border-whiteish z-10 w-full bg-temp-päron text-black-coffee p-4 lg:p-8">
+            <p className="font-bold lg:hidden mb-4 md:text-xl">
+              Oberoende bokhandel med med härligt kaffehäng!
+            </p>
+            <p className="font-bold hidden lg:block mb-4">
+              Majornas böcker & kaffe är en oberoende bokhandel som öppnade
+              sommaren 2019.
+            </p>
+            <p>
+              Majornas böcker & kaffe är en oberoende bokhandel som öppnade
+              sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker,
+              serieböcker och intressanta fackböcker. Förutom böcker säljs också
+              kort, pussel och spel samt en del pappersvaror och roliga
+              presenter. På barnavdelningen hittar man förutom böcker småprylar
+              som är perfekta som kalaspresenter.
+            </p>
+            <p className="hidden lg:block mt-4">
+              Tanken är att erbjuda en trivsam bokhandel där man kan botanisera
+              bland böcker, eller slå sig ner med en espresso och dagstidningen.
+            </p>
+          </div>
+
+          <div className="relative md:col-start-1 md:row-span-6 md:row-start-3 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:row-span-5 hidden md:block md:pr-4 md:mb-4 lg:mb-0">
             <Image
-              src="/muffin-spoon.svg"
-              width="231"
-              height="218"
-              alt="muffin and spoon"
+              src="/about-book-2.png"
+              layout="fill"
+              objectFit="cover"
+              alt="books"
+            ></Image>
+          </div>
+          <div className="md:row-span-4 md:col-start-2 md:row-start-3 lg:col-span-1 lg:col-start-5 lg:mb-2 lg:ml-2 bg-temp-ey font-serif text-[56px] md:text-[32px] text-hembakad leading-none p-4">
+            ALLTID HEMBAKAD FIKA TILL KAFFET
+            <div className="w-full text-center">
+              <Image
+                src="/muffin-spoon.svg"
+                width="231"
+                height="218"
+                alt="muffin and spoon"
+              ></Image>
+            </div>
+          </div>
+          <div className="md:row-span-1 md:row-start-7 md:col-start-2 lg:col-start-1 lg:col-span-4 lg:row-start-6 lg:mb-2 lg:mt-2 bg-tumbleweed p-4 flex justify-center">
+            <div className="mr-4">
+              <Link href="/kontakt">
+                <a className="text-lg underline font-courier-prime text-black-coffee">
+                  Hitta hit
+                </a>
+              </Link>
+            </div>
+            <Arrow color="#322A2E" />
+          </div>
+        </div>
+        <div className="md:grid md:grid-cols-2">
+          <div className="bg-black-coffee text-whiteish p-4 mt-4 md:mt-0 lg:p-8">
+            <p className="mb-2 lg:text-[26px] md:text-lg font-semibold lg:mb-6">
+              Eva Wadman{" "}
+              <span className="hidden md:inline">
+                är Majornas Bokhandel & Kaffe
+              </span>
+            </p>
+            <p>
+              Eva Wadman har alltid älskat litteraturens fascinerande värld. Den
+              förälskelsen växte sig så stark att 2019 öppnade hon sin egna
+              bokhandel i hjärtat av Majorna.
+            </p>
+            <p className="hidden lg:block pt-4">
+              Här finner du aktuell skönlitteratur, barnböcker, serieböcker och
+              intressanta fackböcker. Förutom böcker säljs också kort, pussel
+              och spel samt en del pappersvaror och roliga presenter. På
+              barnavdelningen hittar man förutom böcker småprylar som är
+              perfekta som kalaspresenter.
+            </p>
+          </div>
+          <div className="md:hidden">
+            <Image
+              src="/about-eva.png"
+              layout="responsive"
+              width="343"
+              height="402"
+              alt="author"
+            ></Image>
+          </div>
+          <div className="hidden md:block">
+            <Image
+              src="/about-eva-3.png"
+              layout="responsive"
+              width="400"
+              height="290"
+              alt="author"
             ></Image>
           </div>
         </div>
-        <div className="md:row-span-1 md:row-start-4 md:col-start-2 bg-tumbleweed p-4 flex justify-center">
-          <div className="font-h1 underline mr-4">Hitta hit</div>
-          <div>&#8594;</div>
+        <div className="md:my-4 lg:my-8 md:flex justify-between items-center text-black-coffee">
+          <h3 className="text-xl md:text-3xl lg:text-4xl my-4 md:my-0">
+            Instagram
+          </h3>
+          <div className="md:flex justify-end items-center gap-3 hidden text-black-coffee">
+            <Link href="https://www.instagram.com/majornasbocker/">
+              <a
+                className="text-lg lg:text-2xl underline font-courier-prime"
+                target="_blank"
+              >
+                Följ Oss
+              </a>
+            </Link>
+            <Arrow color="#322A2E" />
+          </div>
         </div>
-      </div>
-      <div className="md:grid md:grid-cols-2 h-[300px] overflow-hidden">
-        <div className="bg-black-coffee text-whiteish mt-4 p-4">
-          <p className="mb-4 text-[26px]">
-            Eva Wadman{" "}
-            <span className="hidden md:inline">
-              är Majornas Bokhandel & Kaffe
-            </span>
-          </p>
-          <p>
-            Eva Wadman har alltid älskat litteraturens fascinerande värld. Den
-            förälskelsen växte sig så stark att 2019 öppnade hon sin egna
-            bokhandel i hjärtat av Majorna.
-          </p>
+        <Instagram feed={feed}></Instagram>
+        <div className="flex md:hidden justify-end items-center gap-3 mt-4">
+          <Link href="/">
+            <a className="text-black-coffee text-lg underline font-courier-prime">
+              Följ Oss
+            </a>
+          </Link>
+          <Arrow color="#000" />
         </div>
-        <div className="md:mt-4">
-          <Image
-            src="/about-eva.png"
-            layout="responsive"
-            width="343"
-            height="402"
-            alt="author"
-          ></Image>
-        </div>
-      </div>
-      <div className="mt-4 mb-4">Instagram</div>
-      <Instagram feed={feed}></Instagram>
-
-      <div className="pb-12">
-        <p className="text-right">Följ Oss</p>
       </div>
     </div>
   );
