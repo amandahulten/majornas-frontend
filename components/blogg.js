@@ -21,8 +21,8 @@ const Posts = ({ data }) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="relative flex flex-col content-center pt-4 sm:px-20">
-        <div className="relative w-full h-96">
-          <Image src={data.imageUrl} layout="fill" objectFit="contain" />
+        <div className="relative w-full h-96 lg:h-screen">
+          <Image src={data.imageUrl} layout="fill" objectFit="cover" />
         </div>
         <div className="pt-4">
           <h1>{data.author}</h1>
