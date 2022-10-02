@@ -77,7 +77,7 @@ export const About = ({ feed }) => {
             <Arrow color="#000" />
           </div>
         </div>
-        <div className="md:grid md:grid-cols-2 ">
+        <div className="md:grid md:grid-cols-2">
           <div className="bg-black-coffee text-whiteish p-4 mt-4 md:mt-0 lg:p-8">
             <p className="mb-2 lg:text-[26px] md:text-lg font-semibold lg:mb-6">
               Eva Wadman{" "}
@@ -109,7 +109,7 @@ export const About = ({ feed }) => {
           </div>
           <div className="hidden md:block">
             <Image
-              src="/about-eva-2.png"
+              src="/about-eva-3.png"
               layout="responsive"
               width="400"
               height="290"
