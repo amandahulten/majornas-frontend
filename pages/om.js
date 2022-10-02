@@ -25,7 +25,7 @@ export const About = ({ feed }) => {
           ></Image>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-7 gap-4 md:mt-4 lg:grid-cols-5 lg:gap-0">
-          <div className="md:row-span-2 md:col-start-1 md:col-span-2 md:row-start-1 lg:col-span-3 lg:col-start-3 lg:border-b-8 lg:border-l-8 border-whiteish z-10 w-full bg-temp-päron text-black-coffee p-4 lg:p-8">
+          <div className="md:row-span-2 md:col-start-1 md:col-span-2 md:row-start-1 lg:col-span-3 lg:col-start-3 lg:border-b-8 mt-4 lg:mt-0 lg:border-l-8 border-whiteish z-10 w-full bg-temp-päron text-black-coffee p-4 lg:p-8">
             <p className="font-bold lg:hidden mb-4 md:text-xl">
               Oberoende bokhandel med med härligt kaffehäng!
             </p>
