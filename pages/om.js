@@ -19,7 +19,7 @@ export const About = ({ feed }) => {
           alt="books"
         ></Image>
       </div>
-      <div className="w-full bg-temp-päron p-4 mt-4">
+      <div className="w-full bg-temp-päron text-black-coffee p-4 mt-4">
         <p className="font-bold mb-4">
           Oberoende bokhandel med med härligt kaffehäng!
         </p>

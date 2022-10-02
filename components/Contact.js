@@ -5,10 +5,8 @@ import Link from "next/link";
 
 const Contact = ({ className, styling, display }) => {
   return (
-    <div className={`bg-temp-ey p-4 ${className}`}>
-      <h2 className="text-xl md:text-2xl mb-3 font-semibold">
-        Kontaktuppgifter
-      </h2>
+    <div className={`text-black-coffee bg-temp-ey p-4 ${className}`}>
+      <h2 className="text-xl md:text-2xl mb-3 font-semibold">Kontakt</h2>
       <div className={`${styling}`}>
         <div>
           <p>Allmänna vägen 22</p>

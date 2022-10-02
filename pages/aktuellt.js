@@ -17,9 +17,9 @@ const Home = ({ data }) => {
           <PreviewCard event={event} key={event._id} />
         ))}
       </div>
-      <h2 className="font-bold text-4xl">Kommande event</h2>
+      <h2 className="text-black-coffee font-bold text-4xl">Kommande event</h2>
       <Slider events={data.comingEventsSlider} />
-      <div className="grid md:grid-cols-2">
+      <div className="grid md:grid-cols-2 text-black-coffee">
         <article className="flex flex-col gap-2">
           <h2 className="font-bold text-4xl">
             Välkommen in på våra Författarkvällar
@@ -36,7 +36,9 @@ const Home = ({ data }) => {
         </article>
         <Books className="aspect-square w-1/2 mx-auto hidden md:relative" />
       </div>
-      <h2 className="font-bold text-4xl">Tidigare författarbesök</h2>
+      <h2 className="font-bold text-4xl text-black-coffee">
+        Tidigare författarbesök
+      </h2>
       <div className="grid md:grid-cols-3 gap-2">
         {data.pastEvents.map((event) => (
           <PreviewCard event={event} key={event._id} />

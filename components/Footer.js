@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -8,12 +9,14 @@ const Footer = () => {
         <div className="md:flex md:justify-between md:pt-[50px] md:px-8 lg:ml-[100px]">
           <div>
             <div className="relative h-32 w-64 md:h-36 md:w-72 ">
-              <Image
-                src="/logo-light.svg"
-                alt="logo"
-                layout="fill"
-                objectFit="cover"
-              />
+              <Link href="/">
+                <Image
+                  src="/logo-light.svg"
+                  alt="logo"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </Link>
             </div>
             <div className="flex justify-center w-full mt-[39px]">
               <div className="flex justify-between w-[160px]">

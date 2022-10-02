@@ -13,14 +13,16 @@ const HamburgerMenu = ({ openHamburgerMenu, hamburgerMenuOpen }) => {
       }
     >
       <div className="fixed w-full h-36 flex-row justify-between items-center bg-black-coffee">
-        <div className="h-36 flex">
+        <div className="h-36 flex items-center">
           <div className="relative h-32 w-64 md:h-36 md:w-72 ">
-            <Image
-              src="/logo-light.svg"
-              alt="logo"
-              layout="fill"
-              objectFit="cover"
-            />
+            <Link href="/">
+              <Image
+                src="/logo-light.svg"
+                alt="logo"
+                layout="fill"
+                objectFit="cover"
+              />
+            </Link>
           </div>
         </div>
         <div className="bg-[url('../public/nav-background.svg')] pr-8">
@@ -31,7 +33,10 @@ const HamburgerMenu = ({ openHamburgerMenu, hamburgerMenuOpen }) => {
             <Close className="cursor-pointer" />
           </div>
           <div className="pt-24 pb-36 h-screen text-base">
-            <ul className="flex flex-col items-end ">
+            <ul
+              onClick={openHamburgerMenu}
+              className="flex flex-col items-end "
+            >
               <li className="p-4">
                 <Link href="/">Hem</Link>
               </li>

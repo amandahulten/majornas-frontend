@@ -51,7 +51,7 @@ const Home = ({ feed }) => {
             </div>
           </div>
 
-          <div className="bg-temp-ey lg:flex flex-col justify-between p-4 md:row-start-2 lg:row-start-1 md:col-span-2 md:col-start-5 lg:col-start-4 lg:col-span-1">
+          <div className="bg-temp-ey text-black-coffee lg:flex flex-col justify-between p-4 md:row-start-2 lg:row-start-1 md:col-span-2 md:col-start-5 lg:col-start-4 lg:col-span-1">
             <p className="text-xl font-semibold mb-4">
               Ta ett kik på vad som försiggår i butiken. Vi planerar event
               kontinuerligt!
@@ -97,7 +97,7 @@ const Home = ({ feed }) => {
             </div>
           </div>
         </div>
-        <div className="my-4 lg:my-12">
+        <div className="text-black-coffee my-4 lg:my-12">
           <div className="md:my-4 lg:my-8 md:flex justify-between items-center">
             <h3 className="text-xl md:text-3xl lg:text-4xl my-4 md:my-0">
               Instagram
