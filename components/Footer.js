@@ -71,10 +71,20 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-whiteish mt-[50px] lg:ml-[50px]">
-              <p className="mb-4">Hem</p>
-              <p className="mb-4">Aktuellt</p>
-              <p className="mb-4">Om oss</p>
-              <p className="mb-[50px]">Kontakt</p>
+              <ul>
+                <li className="mb-4">
+                  <Link href="/">Hem</Link>
+                </li>
+                <li className="mb-4">
+                  <Link href="/aktuellt">Aktuellt</Link>
+                </li>
+                <li className="mb-4">
+                  <Link href="/om">Om oss</Link>
+                </li>
+                <li className="mb-[50px]">
+                  <Link href="/kontakt">Kontakt</Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
