@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <div className="h-[20px] bg-black-coffee"></div>
       <div className="bg-[url('../public/bg-footer-desktop.svg')]">
-        <div className="md:flex md:justify-between md:pt-[50px] md:px-8 lg:ml-[100px]">
+        <div className="md:flex md:justify-between md:pt-[50px] md:px-8 lg:pl-[100px]">
           <div>
             <div className="relative h-32 w-64 md:h-36 md:w-72 ">
               <Link href="/">
