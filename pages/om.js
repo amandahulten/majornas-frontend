@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Instagram from "../components/Instagram";
 import getInstaImages from "../queries/getInstaImages";
+import Link from "next/link";
+import Arrow from "../components/svgs/Arrow";
 
 export const About = ({ feed }) => {
   console.log(feed);
@@ -34,8 +36,8 @@ export const About = ({ feed }) => {
             per conubia nostra, per inceptos himenaeos.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-4">
-          <div className="relative md:col-start-1 md:row-span-4 hidden md:block mt-4 md:pr-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-5 gap-4">
+          <div className="relative md:col-start-1 md:row-span-5 hidden md:block mt-4 md:pr-4">
             <Image
               src="/about-book-2.png"
               layout="fill"
@@ -43,7 +45,7 @@ export const About = ({ feed }) => {
               alt="books"
             ></Image>
           </div>
-          <div className="md:row-span-3 md:col-start-2 md:row-start-1 bg-temp-ey mt-4 font-DMSerif text-[56px] md:text-[32px] text-hembakad leading-none p-4">
+          <div className="md:row-span-4 md:col-start-2 md:row-start-1 bg-temp-ey mt-4 font-serif text-[56px] md:text-[32px] text-hembakad leading-none p-4">
             ALLTID HEMBAKAD FIKA TILL KAFFET
             <div className="w-full text-center">
               <Image
@@ -54,9 +56,15 @@ export const About = ({ feed }) => {
               ></Image>
             </div>
           </div>
-          <div className="md:row-span-1 md:row-start-4 md:col-start-2 bg-tumbleweed p-4 flex justify-center">
-            <div className="font-h1 underline mr-4">Hitta hit</div>
-            <div>&#8594;</div>
+          <div className="md:row-span-1 md:row-start-5 md:col-start-2 bg-tumbleweed p-4 flex justify-center">
+            <div className="mr-4">
+              <Link href="/kontakt">
+                <a className="text-lg underline font-courier-prime">
+                  Hitta hit
+                </a>
+              </Link>
+            </div>
+            <Arrow color="#000" />
           </div>
         </div>
         <div className="md:grid md:grid-cols-2 h-[300px] overflow-hidden">
