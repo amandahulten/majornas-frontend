@@ -31,7 +31,7 @@ const Contact = ({ className, styling, display }) => {
             Hitta hit
           </a>
         </Link>
-        <Arrow color="#000" />
+        <Arrow color="#322A2E" />
       </div>
     </div>
   );

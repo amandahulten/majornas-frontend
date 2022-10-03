@@ -69,12 +69,12 @@ export const About = ({ feed }) => {
           <div className="md:row-span-1 md:row-start-7 md:col-start-2 lg:col-start-1 lg:col-span-4 lg:row-start-6 lg:mb-2 lg:mt-2 bg-tumbleweed p-4 flex justify-center">
             <div className="mr-4">
               <Link href="/kontakt">
-                <a className="text-lg underline font-courier-prime">
+                <a className="text-lg underline font-courier-prime text-black-coffee">
                   Hitta hit
                 </a>
               </Link>
             </div>
-            <Arrow color="#000" />
+            <Arrow color="#322A2E" />
           </div>
         </div>
         <div className="md:grid md:grid-cols-2">
@@ -117,11 +117,11 @@ export const About = ({ feed }) => {
             ></Image>
           </div>
         </div>
-        <div className="md:my-4 lg:my-8 md:flex justify-between items-center">
+        <div className="md:my-4 lg:my-8 md:flex justify-between items-center text-black-coffee">
           <h3 className="text-xl md:text-3xl lg:text-4xl my-4 md:my-0">
             Instagram
           </h3>
-          <div className="md:flex justify-end items-center gap-3 hidden ">
+          <div className="md:flex justify-end items-center gap-3 hidden text-black-coffee">
             <Link href="https://www.instagram.com/majornasbocker/">
               <a
                 className="text-lg lg:text-2xl underline font-courier-prime"
@@ -130,13 +130,15 @@ export const About = ({ feed }) => {
                 Följ Oss
               </a>
             </Link>
-            <Arrow color="#000" />
+            <Arrow color="#322A2E" />
           </div>
         </div>
         <Instagram feed={feed}></Instagram>
         <div className="flex md:hidden justify-end items-center gap-3 mt-4">
           <Link href="/">
-            <a className="text-lg underline font-courier-prime">Följ Oss</a>
+            <a className="text-black-coffee text-lg underline font-courier-prime">
+              Följ Oss
+            </a>
           </Link>
           <Arrow color="#000" />
         </div>
