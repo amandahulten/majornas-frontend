@@ -15,7 +15,7 @@ const Home = ({ feed }) => {
         <title>Majornas böcker & kaffe</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="pb-4 max-w-screen-xl mx-auto">
+      <div className="pb-4">
         <h1>
           OBEROENDE BOKHANDEL <br /> MED KAFFEHÄNG
         </h1>
