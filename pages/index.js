@@ -20,11 +20,11 @@ const Home = ({ feed }) => {
           OBEROENDE BOKHANDEL <br /> MED KAFFEHÄNG
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-4 lg:grid-rows-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-4 lg:grid-rows-3 gap-4 ">
           <div className="relative h-72 md:h-auto md:col-span-4 md:row-span-2 lg:col-span-2">
             <Image
               src="/store.png"
-              alt="Hejsan"
+              alt="Bild inne i butiken från ytterdörrens perspektiv"
               layout="fill"
               objectFit="cover"
             />
@@ -33,7 +33,7 @@ const Home = ({ feed }) => {
           <Openings className="md:col-span-3 lg:col-span-1 md:row-start-3 md:col-start-4 lg:col-start-1" />
           <Contact className="md:col-span-3 lg:col-span-1 md:row-start-3 md:col-start-1 lg:col-start-2" />
 
-          <div className="bg-tumbleweed p-4 pb-0 md:row-start-1 md:col-span-2 md:col-start-5 lg:col-start-3 lg:col-span-1">
+          <div className="bg-tumbleweed p-4 pb-0 md:row-start-1 md:col-span-2 md:col-start-5 lg:col-start-3 lg:col-span-1 flex flex-col justify-between">
             <p className="text-5xl mb-6 font-['DM-serif'] text-[#4E4247] max-h-60 md:hidden lg:block lg:text-4xl xl:hidden">
               POCKET + <br /> KAFFE = <br /> 100 kr
             </p>
@@ -64,37 +64,15 @@ const Home = ({ feed }) => {
             </div>
           </div>
 
-          <div className="bg-black-coffee md:col-span-6 lg:col-span-2 lg:row-span-2 lg:col-start-3 lg:row-start-2 md:flex flex-row-reverse">
-            <div className="relative h-80 md:h-auto md:w-[50%]">
-              <Image
-                src="/boktips.png"
-                alt="hej"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
+          <div className="relative h-72 lg:h-auto md:col-span-6 lg:col-span-2 lg:row-span-2 lg:col-start-3 lg:row-start-2">
 
-            <div className="md:w-[50%] p-4 lg:flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl md:text-2xl text-whiteish font-semibold pt-4 md:pt-0">
-                  Boktips
-                </h3>
-                <p className="my-4 text-whiteish">
-                  Tre sinsemellan olika kvinnor anlitas av Försvarsmakten för
-                  sina skarpa hjärnors skull. Kontrahenterna är en rafflande
-                  berättelse...
-                </p>
-              </div>
+            <Image
+              src="/skylt.png"
+              alt="Skylten utanför butiken"
+              layout="fill"
+              objectFit="cover"
+            />
 
-              <div className="flex justify-end gap-3 mb-4">
-                <Link href="/boktips">
-                  <a className="text-lg underline text-whiteish font-courier-prime">
-                    Läs mer
-                  </a>
-                </Link>
-                <Arrow color="#fff" />
-              </div>
-            </div>
           </div>
         </div>
         <div className="text-black-coffee my-4 lg:my-12">

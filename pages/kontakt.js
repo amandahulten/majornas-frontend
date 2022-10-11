@@ -12,17 +12,17 @@ const Kontakt = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <div className="pt-4 pb-12 max-w-screen-xl mx-auto">
+      <div className="pb-12 max-w-screen-xl mx-auto">
         <h1>KONTAKT</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-8 gap-4">
           <Openings className="md:row-start-1 md:row-span-3" />
           <div className="relative h-48 md:hidden">
-            <Image src="/books.png" layout="fill" objectFit="cover" />
+            <Image src="/books.png" alt="Böcker stående bredvid varandra" layout="fill" objectFit="cover" />
           </div>
 
           <div className="relative hidden md:block h-auto md:col-span-2 md:row-span-6">
-            <Image src="/books-desktop.png" layout="fill" objectFit="cover" />
+            <Image src="/contactbooks.png" alt="" layout="fill" objectFit="cover" />
           </div>
 
           <Contact

@@ -11,7 +11,7 @@ const Home = ({ data }) => {
         <title>Aktuellt</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="grid gap-6 p-2 max-w-screen-xl mx-auto">
+      <div className="grid gap-6 p-2 max-w-screen-xl mx-auto pb-12">
         <h1>AKTUELLT</h1>
         <div className="grid md:grid-cols-3 gap-2">
           {data.comingEvents.map((event) => (
