@@ -60,19 +60,17 @@ const Home = ({ feed }) => {
               <Link href="/aktuellt">
                 <a className="text-lg underline font-courier-prime">Aktuellt</a>
               </Link>
-              <Arrow color="#000" />
+              <Arrow color="#322A2E" />
             </div>
           </div>
 
           <div className="relative h-72 lg:h-auto md:col-span-6 lg:col-span-2 lg:row-span-2 lg:col-start-3 lg:row-start-2">
-
             <Image
               src="/skylt.png"
               alt="Skylten utanför butiken"
               layout="fill"
               objectFit="cover"
             />
-
           </div>
         </div>
         <div className="text-black-coffee my-4 lg:my-12">
@@ -89,7 +87,7 @@ const Home = ({ feed }) => {
                   Följ Oss
                 </a>
               </Link>
-              <Arrow color="#000" />
+              <Arrow color="#322A2E" />
             </div>
           </div>
           <Instagram feed={feed} />
@@ -97,7 +95,7 @@ const Home = ({ feed }) => {
             <Link href="/">
               <a className="text-lg underline font-courier-prime">Följ Oss</a>
             </Link>
-            <Arrow color="#000" />
+            <Arrow color="#322A2E" />
           </div>
         </div>
       </div>
