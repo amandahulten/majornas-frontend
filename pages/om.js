@@ -56,7 +56,7 @@ export const About = ({ feed }) => {
             ></Image>
           </div>
           <div className="md:row-span-4 md:col-start-2 md:row-start-3 lg:col-span-1 lg:col-start-5 lg:mb-2 lg:ml-2 bg-temp-ey font-serif text-[56px] md:text-[32px] text-hembakad leading-none p-4">
-            ALLTID HEMBAKAD FIKA TILL KAFFET
+            ALLTID GOTT KAFFE
             <div className="w-full text-center">
               <Image
                 src="/muffin-spoon.svg"
@@ -75,46 +75,6 @@ export const About = ({ feed }) => {
               </Link>
             </div>
             <Arrow color="#322A2E" />
-          </div>
-        </div>
-        <div className="md:grid md:grid-cols-2">
-          <div className="bg-black-coffee text-whiteish p-4 mt-4 md:mt-0 lg:p-8">
-            <p className="mb-2 lg:text-[26px] md:text-lg font-semibold lg:mb-6">
-              Eva Wadman{" "}
-              <span className="hidden md:inline">
-                är Majornas Bokhandel & Kaffe
-              </span>
-            </p>
-            <p>
-              Eva Wadman har alltid älskat litteraturens fascinerande värld. Den
-              förälskelsen växte sig så stark att 2019 öppnade hon sin egna
-              bokhandel i hjärtat av Majorna.
-            </p>
-            <p className="hidden lg:block pt-4">
-              Här finner du aktuell skönlitteratur, barnböcker, serieböcker och
-              intressanta fackböcker. Förutom böcker säljs också kort, pussel
-              och spel samt en del pappersvaror och roliga presenter. På
-              barnavdelningen hittar man förutom böcker småprylar som är
-              perfekta som kalaspresenter.
-            </p>
-          </div>
-          <div className="md:hidden">
-            <Image
-              src="/about-eva.png"
-              layout="responsive"
-              width="343"
-              height="402"
-              alt="author"
-            ></Image>
-          </div>
-          <div className="hidden md:block">
-            <Image
-              src="/about-eva-3.png"
-              layout="responsive"
-              width="400"
-              height="290"
-              alt="author"
-            ></Image>
           </div>
         </div>
         <div className="md:my-4 lg:my-8 md:flex justify-between items-center text-black-coffee">

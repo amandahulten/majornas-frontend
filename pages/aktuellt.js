@@ -27,13 +27,12 @@ const Home = ({ data }) => {
             </h2>
             <p className="font-bold">Vi uppskattar alltid finbesök!</p>
             <p>
-              Här på Majornas Bokhandel & Kaffe vill vi alltid hitta tid för
-              våra favoritförfattare och därmed bjuda över dem på en frågestund.
-              Har du någon författare du skulle vilja se i butiken? Några frågor
-              som inte du kan släppa? Maila till oss HÄR ifall du önskar se en
-              särskild författare.
+              Välkommen på författarkvällar! Det anordnas kontinuerligt
+              författarkvällar på Majornas böcker & kaffe då du kan höra
+              författare berätta om och läsa ur aktuella böcker. Kvällarna
+              brukar vara mycket uppskattade!
             </p>
-            <p>Nedan ser du våra författare från tidigare besök.</p>
+            <p>Nedan ser du bilder från tidigare författarbesök.</p>
           </article>
           <Books className="aspect-square w-1/2 mx-auto hidden md:block" />
         </div>
