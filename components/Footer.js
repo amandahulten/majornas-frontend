@@ -10,12 +10,14 @@ const Footer = () => {
           <div>
             <div className="relative h-32 w-64 md:h-36 md:w-72 ">
               <Link href="/">
-                <Image
-                  src="/logo-light.svg"
-                  alt="logo"
-                  layout="fill"
-                  objectFit="cover"
-                />
+                <a>
+                  <Image
+                    src="/logo-light.svg"
+                    alt="logo"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </a>
               </Link>
             </div>
             <div className="flex justify-start md:m-0 pl-8 md:justify-center w-full mt-[39px]">
@@ -56,7 +58,7 @@ const Footer = () => {
                 <p className="font-bold">Stängt</p>
               </div>
             </div>
-            <div className="text-whiteish mt-[50px] mr-[20px] hidden lg:flex lg:block">
+            <div className="text-whiteish mt-[50px] mr-[20px] hidden lg:flex">
               <div className="text-right mr-[20px]">
                 <p className="mb-4">Tis - Fre</p>
                 <p className="mb-4">Lör</p>

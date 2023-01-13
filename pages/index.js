@@ -7,8 +7,10 @@ import Arrow from "../components/svgs/Arrow";
 import Coffee from "../components/svgs/Coffee";
 import getInstaImages from "../queries/getInstaImages";
 import Instagram from "../components/Instagram";
+import client from "../utils/client";
+import { dateDiff } from "../utils/dateDiff";
 
-const Home = ({ feed }) => {
+const Home = ({ feed, offer }) => {
   return (
     <div>
       <Head>
@@ -33,21 +35,19 @@ const Home = ({ feed }) => {
           <Openings className="md:col-span-3 lg:col-span-1 md:row-start-3 md:col-start-4 lg:col-start-1" />
           <Contact className="md:col-span-3 lg:col-span-1 md:row-start-3 md:col-start-1 lg:col-start-2" />
 
-          <div className="bg-tumbleweed p-4 pb-0 md:row-start-1 md:col-span-2 md:col-start-5 lg:col-start-3 lg:col-span-1 flex flex-col justify-between">
-            <p className="text-5xl mb-6 font-['DM-serif'] text-[#4E4247] max-h-60 md:hidden lg:block lg:text-4xl xl:hidden">
-              POCKET + <br /> KAFFE = <br /> 100 kr
-            </p>
-
-            <p className="hidden md:block lg:hidden text-5xl md:text-3xl mb-5 font-['DM-serif'] text-[#4E4247] max-h-60">
-              POCKET + <br /> KAFFE = 100 kr
-            </p>
-
-            <p className="hidden xl:block text-4xl mb-5 font-['DM-serif'] text-[#4E4247]">
-              POCKET + KAFFE <br /> = 100 kr
-            </p>
-
-            <div className="flex justify-center">
-              <Coffee width="230" />
+          <div className="bg-tumbleweed md:row-start-1 md:col-span-2 md:col-start-5 lg:col-start-3 lg:col-span-1">
+            <div className="relative overflow-hidden isolate w-full h-full p-4 pb-0">
+              <div className="flex justify-between md:flex-col h-full w-full">
+                <p className="text-5xl min-w-fit mb-6 z-10 font-['DM-serif'] text-hembakad max-h-60 whitespace-pre-wrap mix-blend-plus-lighter">
+                  {offer ? offer.body : "Inget erbjudande just nu"}
+                </p>
+                <p className="font-['DM-serif'] text-hembakad text-4xl mix-blend-plus-lighter">
+                  {offer.ends && `${dateDiff(offer.ends).includes('sedan') ? 'Slutade': 'Slutar' } ${dateDiff(offer.ends)}`}
+                </p>
+              </div>
+              <div className="flex justify-center m:w-full absolute bottom-0 -z-10 right-0 md:left-1/2 md:-translate-x-1/2 max-h-full">
+                <Coffee width={230} className="fill-hembakad" />
+              </div>
             </div>
           </div>
 
@@ -105,10 +105,18 @@ const Home = ({ feed }) => {
 
 export const getServerSideProps = async () => {
   const feed = await getInstaImages();
-  
+  const res = await client.fetch(`
+  *[_type == "offer"]{
+    _id,
+    body,
+    ends,
+  }[0]
+`);
+
   return {
     props: {
       feed,
+      offer: res,
     },
   };
 };

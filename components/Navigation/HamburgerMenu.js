@@ -16,12 +16,14 @@ const HamburgerMenu = ({ openHamburgerMenu, hamburgerMenuOpen }) => {
         <div className="h-36 flex items-center">
           <div className="relative h-32 w-64 md:h-36 md:w-72 ">
             <Link href="/">
-              <Image
-                src="/logo-light.svg"
-                alt="logo"
-                layout="fill"
-                objectFit="cover"
-              />
+              <a>
+                <Image
+                  src="/logo-light.svg"
+                  alt="logo"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </a>
             </Link>
           </div>
         </div>
