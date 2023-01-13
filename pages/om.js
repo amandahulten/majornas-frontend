@@ -7,7 +7,7 @@ import Arrow from "../components/svgs/Arrow";
 import stringToHtml from "../utils/stringToHtml";
 import client from "../utils/client";
 
-export const About = ({ data,feed }) => {
+export const About = ({ data, feed }) => {
   return (
     <div className="pb-12">
       <Head>
@@ -36,10 +36,10 @@ export const About = ({ data,feed }) => {
           <div className="relative md:col-start-1 md:row-span-6 md:row-start-3 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:row-span-5 hidden md:block md:pr-4 md:mb-4 lg:mb-0">
             <Image
               src="/about-book-2.png"
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
               alt="books"
-            ></Image>
+            />
           </div>
           <div className="md:row-span-4 md:col-start-2 md:row-start-3 lg:col-span-1 lg:col-start-5 lg:mb-2 lg:ml-2 bg-temp-ey font-serif text-[56px] md:text-[32px] text-hembakad leading-none p-4">
             ALLTID GOTT KAFFE
@@ -49,15 +49,16 @@ export const About = ({ data,feed }) => {
                 width="231"
                 height="218"
                 alt="muffin and spoon"
-              ></Image>
+              />
             </div>
           </div>
           <div className="md:row-span-1 md:row-start-7 md:col-start-2 lg:col-start-1 lg:col-span-4 lg:row-start-6 lg:mb-2 lg:mt-2 bg-tumbleweed p-4 flex justify-center">
             <div className="mr-4">
-              <Link href="/kontakt">
-                <a className="text-lg underline font-courier-prime text-black-coffee">
-                  Hitta hit
-                </a>
+              <Link
+                href="/kontakt"
+                className="text-lg underline font-courier-prime text-black-coffee"
+              >
+                Hitta hit
               </Link>
             </div>
             <Arrow color="#322A2E" />
@@ -68,23 +69,23 @@ export const About = ({ data,feed }) => {
             Instagram
           </h3>
           <div className="md:flex justify-end items-center gap-3 hidden text-black-coffee">
-            <Link href="https://www.instagram.com/majornasbocker/">
-              <a
-                className="text-lg lg:text-2xl underline font-courier-prime"
-                target="_blank"
-              >
-                Följ Oss
-              </a>
+            <Link
+              href="https://www.instagram.com/majornasbocker/"
+              className="text-lg lg:text-2xl underline font-courier-prime"
+              target="_blank"
+            >
+              Följ Oss
             </Link>
             <Arrow color="#322A2E" />
           </div>
         </div>
         <Instagram feed={feed}></Instagram>
         <div className="flex md:hidden justify-end items-center gap-3 mt-4">
-          <Link href="/">
-            <a className="text-black-coffee text-lg underline font-courier-prime">
-              Följ Oss
-            </a>
+          <Link
+            href="/"
+            className="text-black-coffee text-lg underline font-courier-prime"
+          >
+            Följ Oss
           </Link>
           <Arrow color="#000" />
         </div>

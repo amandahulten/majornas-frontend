@@ -72,7 +72,12 @@ const Slider = ({ events }) => {
   return (
     <div className="grid md:grid-cols-2 md:grid-rows-5 gap-2">
       <div className="aspect-video md:aspect-square lg:aspect-video relative w-full md:row-span-5">
-        <Image src={images[active].imageUrl} layout="fill" objectFit="cover" />
+        <Image
+          src={images[active].imageUrl}
+          fill
+          className="object-cover"
+          alt={images[active].author}
+        />
       </div>
       {images.map((x, i) => (
         <div
@@ -94,9 +99,7 @@ const Slider = ({ events }) => {
             </p>
           </div>
           <Link href={"/event/" + x.slug}>
-            <a>
-              <RightArrowIcon className="w-8 flex-1 text-black-coffee" />
-            </a>
+            <RightArrowIcon className="w-8 flex-1 text-black-coffee" />
           </Link>
         </div>
       ))}

@@ -16,14 +16,7 @@ const Nav = () => {
       <div className="flex items-center">
         <div className="relative h-32 w-64 md:h-36 md:w-72 lg:h-40 lg:w-80">
           <Link href="/">
-            <a>
-              <Image
-                src="/logo-dark.svg"
-                alt="logo"
-                layout="fill"
-                objectFit="cover"
-              />
-            </a>
+            <Image src="/logo-dark.svg" alt="logo" fill />
           </Link>
         </div>
       </div>

@@ -1,7 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import client from "../utils/client";
 
 const Footer = () => {
+  const [openings,setOpenings] = useState({});
+  useEffect(() => {
+    (async () => {
+      const openings = await client.fetch(`
+      *[_type == "siteSettings"]{
+        _id,
+        opening_w,
+        opening_ms,
+        opening_s,
+      }[0]
+      `)
+      setOpenings({...openings})
+    })()
+  },[]);
   return (
     <footer>
       <div className="h-[20px] bg-black-coffee"></div>
@@ -10,14 +26,7 @@ const Footer = () => {
           <div>
             <div className="relative h-32 w-64 md:h-36 md:w-72 ">
               <Link href="/">
-                <a>
-                  <Image
-                    src="/logo-light.svg"
-                    alt="logo"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </a>
+                <Image src="/logo-light.svg" alt="logo" fill />
               </Link>
             </div>
             <div className="flex justify-start md:m-0 pl-8 md:justify-center w-full mt-[39px]">
@@ -47,15 +56,15 @@ const Footer = () => {
             <div className="text-whiteish mt-12 mr-[20px] lg:hidden">
               <div>
                 <p className="mr-[25px]">Tis - Fre</p>
-                <p className="font-bold">11:00 - 18:00</p>
+                <p className="font-bold">{openings.opening_w}</p>
               </div>
               <div>
                 <p className="mt-4 mr-[25px]">Lör</p>
-                <p className="font-bold">11:00 - 15:00</p>
+                <p className="font-bold">{openings.opening_s}</p>
               </div>
               <div>
                 <p className="mt-4 mr-[25px]">Sön - Mån</p>
-                <p className="font-bold">Stängt</p>
+                <p className="font-bold">{openings.opening_ms}</p>
               </div>
             </div>
             <div className="text-whiteish mt-[50px] mr-[20px] hidden lg:flex">
@@ -66,10 +75,10 @@ const Footer = () => {
                 <p className="mb-[50px]">Mån</p>
               </div>
               <div>
-                <p className="font-bold mb-4">11:00 - 18:00</p>
-                <p className="font-bold mb-4">11:00 - 15:00</p>
-                <p className="font-bold mb-4">Stängt</p>
-                <p className="font-bold mb-4">Stängt</p>
+                <p className="font-bold mb-4">{openings.opening_w}</p>
+                <p className="font-bold mb-4">{openings.opening_s}</p>
+                <p className="font-bold mb-4">{openings.opening_ms}</p>
+                <p className="font-bold mb-4">{openings.opening_ms}</p>
               </div>
             </div>
             <div className="text-whiteish mt-[50px] lg:ml-[50px]">

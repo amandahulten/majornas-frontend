@@ -21,7 +21,12 @@ const Posts = ({ data }) => {
         <title>{data.author}</title>
       </Head>
       <div className="relative w-full h-96 lg:h-screen">
-        <Image src={data.imageUrl} layout="fill" objectFit="contain"></Image>
+        <Image
+          src={data.imageUrl}
+          fill
+          className="object-contain"
+          alt={data.author}
+        ></Image>
       </div>
       <div className="pt-4">
         <h1>{data.author}</h1>
@@ -37,7 +42,6 @@ const Posts = ({ data }) => {
               alt="instagram-logo"
               height="30"
               width="30"
-              fill="#000"
             />
             <p className="cursor-pointer">Dela</p>
           </div>
@@ -59,15 +63,21 @@ const Posts = ({ data }) => {
           {data.prev && (
             <div className="flex justify-center items-center gap-3 h-16 w-1/2 lg:w-full bg-temp-ey text-black-coffee">
               <Back color="#322A2E" />
-              <Link href={"/event/" + data.prev.slug}>
-                <a className="text-lg underline font-courier-prime">Tidigare</a>
+              <Link
+                href={"/event/" + data.prev.slug}
+                className="text-lg underline font-courier-prime"
+              >
+                Tidigare
               </Link>
             </div>
           )}
           {data.next && (
             <div className="flex justify-center items-center gap-3 h-16  w-1/2 lg:w-full bg-tumbleweed text-black-coffee">
-              <Link href={"/event/" + data.next.slug}>
-                <a className="text-lg underline font-courier-prime">Nästa</a>
+              <Link
+                href={"/event/" + data.next.slug}
+                className="text-lg underline font-courier-prime"
+              >
+                Nästa
               </Link>
               <Arrow color="#322A2E" />
             </div>

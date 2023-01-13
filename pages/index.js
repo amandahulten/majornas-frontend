@@ -27,13 +27,16 @@ const Home = ({ feed, data }) => {
             <Image
               src="/store.png"
               alt="Bild inne i butiken från ytterdörrens perspektiv"
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
             />
           </div>
 
           <Openings className="md:col-span-3 lg:col-span-1 md:row-start-3 md:col-start-4 lg:col-start-1" />
-          <Contact data={data.contact} className="md:col-span-3 lg:col-span-1 md:row-start-3 md:col-start-1 lg:col-start-2" />
+          <Contact
+            data={data.contact}
+            className="md:col-span-3 lg:col-span-1 md:row-start-3 md:col-start-1 lg:col-start-2"
+          />
 
           <div className="bg-tumbleweed md:row-start-1 md:col-span-2 md:col-start-5 lg:col-start-3 lg:col-span-1">
             <div className="relative overflow-hidden isolate w-full h-full p-4 pb-0">
@@ -62,8 +65,11 @@ const Home = ({ feed, data }) => {
               kontinuerligt!
             </p>
             <div className="flex justify-end gap-3 items-center">
-              <Link href="/aktuellt">
-                <a className="text-lg underline font-courier-prime">Aktuellt</a>
+              <Link
+                href="/aktuellt"
+                className="text-lg underline font-courier-prime"
+              >
+                Aktuellt
               </Link>
               <Arrow color="#322A2E" />
             </div>
@@ -73,8 +79,8 @@ const Home = ({ feed, data }) => {
             <Image
               src="/skylt.png"
               alt="Skylten utanför butiken"
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
             />
           </div>
         </div>
@@ -84,21 +90,20 @@ const Home = ({ feed, data }) => {
               Instagram
             </h3>
             <div className="md:flex justify-end items-center gap-3 hidden ">
-              <Link href="https://www.instagram.com/majornasbocker/">
-                <a
-                  className="text-lg lg:text-2xl underline font-courier-prime"
-                  target="_blank"
-                >
-                  Följ Oss
-                </a>
+              <Link
+                href="https://www.instagram.com/majornasbocker/"
+                className="text-lg lg:text-2xl underline font-courier-prime"
+                target="_blank"
+              >
+                Följ Oss
               </Link>
               <Arrow color="#322A2E" />
             </div>
           </div>
           <Instagram feed={feed} />
           <div className="flex md:hidden justify-end items-center gap-3 mt-4">
-            <Link href="/">
-              <a className="text-lg underline font-courier-prime">Följ Oss</a>
+            <Link href="/" className="text-lg underline font-courier-prime">
+              Följ Oss
             </Link>
             <Arrow color="#322A2E" />
           </div>
