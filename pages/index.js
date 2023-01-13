@@ -103,14 +103,14 @@ const Home = ({ feed }) => {
   );
 };
 
-export default Home;
-
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const feed = await getInstaImages();
-
+  
   return {
     props: {
       feed,
     },
   };
 };
+
+export default Home;

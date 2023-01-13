@@ -49,7 +49,7 @@ const Home = ({ data }) => {
   );
 };
 
-const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const res = await client.fetch(`
   {
   "comingEventsSlider": *[_type == "event" && publishedAt > now()]{
@@ -91,5 +91,4 @@ const getStaticProps = async (context) => {
   };
 };
 
-export { getStaticProps };
 export default Home;

@@ -2,7 +2,7 @@ import Posts from "../../components/blogg";
 import client from "../../utils/client";
 
 const Event = ({ data }) => <Posts data={data} />;
-const getServerSideProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const res = await client.fetch(`
   {
   "post": *[_type == "event"  && slug.current == "${context.query.event}"]{
@@ -25,5 +25,4 @@ const getServerSideProps = async (context) => {
   };
 };
 
-export { getServerSideProps };
 export default Event;
