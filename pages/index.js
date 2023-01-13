@@ -10,7 +10,7 @@ import Instagram from "../components/Instagram";
 import client from "../utils/client";
 import { dateDiff } from "../utils/dateDiff";
 
-const Home = ({ feed, offer }) => {
+const Home = ({ feed, data }) => {
   return (
     <div>
       <Head>
@@ -33,16 +33,21 @@ const Home = ({ feed, offer }) => {
           </div>
 
           <Openings className="md:col-span-3 lg:col-span-1 md:row-start-3 md:col-start-4 lg:col-start-1" />
-          <Contact className="md:col-span-3 lg:col-span-1 md:row-start-3 md:col-start-1 lg:col-start-2" />
+          <Contact data={data.contact} className="md:col-span-3 lg:col-span-1 md:row-start-3 md:col-start-1 lg:col-start-2" />
 
           <div className="bg-tumbleweed md:row-start-1 md:col-span-2 md:col-start-5 lg:col-start-3 lg:col-span-1">
             <div className="relative overflow-hidden isolate w-full h-full p-4 pb-0">
               <div className="flex justify-between md:flex-col h-full w-full">
                 <p className="text-5xl min-w-fit mb-6 z-10 font-['DM-serif'] text-hembakad max-h-60 whitespace-pre-wrap mix-blend-plus-lighter">
-                  {offer ? offer.body : "Inget erbjudande just nu"}
+                  {data.offer ? data.offer.body : "Inget erbjudande just nu"}
                 </p>
                 <p className="font-['DM-serif'] text-hembakad text-4xl mix-blend-plus-lighter">
-                  {offer.ends && `${dateDiff(offer.ends).includes('sedan') ? 'Slutade': 'Slutar' } ${dateDiff(offer.ends)}`}
+                  {data.offer.ends &&
+                    `${
+                      dateDiff(data.offer.ends).includes("sedan")
+                        ? "Slutade"
+                        : "Slutar"
+                    } ${dateDiff(data.offer.ends)}`}
                 </p>
               </div>
               <div className="flex justify-center m:w-full absolute bottom-0 -z-10 right-0 md:left-1/2 md:-translate-x-1/2 max-h-full">
@@ -106,17 +111,25 @@ const Home = ({ feed, offer }) => {
 export const getServerSideProps = async () => {
   const feed = await getInstaImages();
   const res = await client.fetch(`
-  *[_type == "offer"]{
+  {
+    "offer":*[_type == "offer"]{
     _id,
     body,
     ends,
+  }[0],
+  "contact":*[_type == "siteSettings"]{
+    _id,
+    address,
+    email,
+    phone,
   }[0]
+}
 `);
 
   return {
     props: {
       feed,
-      offer: res,
+      data: res,
     },
   };
 };

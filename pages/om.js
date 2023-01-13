@@ -4,9 +4,10 @@ import Instagram from "../components/Instagram";
 import getInstaImages from "../queries/getInstaImages";
 import Link from "next/link";
 import Arrow from "../components/svgs/Arrow";
+import stringToHtml from "../utils/stringToHtml";
+import client from "../utils/client";
 
-export const About = ({ feed }) => {
-  console.log(feed);
+export const About = ({ data,feed }) => {
   return (
     <div className="pb-12">
       <Head>
@@ -26,25 +27,10 @@ export const About = ({ feed }) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-7 gap-4 md:mt-4 lg:grid-cols-5 lg:gap-0">
           <div className="md:row-span-2 md:col-start-1 md:col-span-2 md:row-start-1 lg:col-span-3 lg:col-start-3 lg:border-b-8 mt-4 lg:mt-0 lg:border-l-8 border-whiteish z-10 w-full bg-temp-päron text-black-coffee p-4 lg:p-8">
-            <p className="font-bold lg:hidden mb-4 md:text-xl">
+            <p className="font-bold mb-4 md:text-xl md:mb-4">
               Oberoende bokhandel med med härligt kaffehäng!
             </p>
-            <p className="font-bold hidden lg:block mb-4">
-              Majornas böcker & kaffe är en oberoende bokhandel som öppnade
-              sommaren 2019.
-            </p>
-            <p>
-              Majornas böcker & kaffe är en oberoende bokhandel som öppnade
-              sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker,
-              serieböcker och intressanta fackböcker. Förutom böcker säljs också
-              kort, pussel och spel samt en del pappersvaror och roliga
-              presenter. På barnavdelningen hittar man förutom böcker småprylar
-              som är perfekta som kalaspresenter.
-            </p>
-            <p className="hidden lg:block mt-4">
-              Tanken är att erbjuda en trivsam bokhandel där man kan botanisera
-              bland böcker, eller slå sig ner med en espresso och dagstidningen.
-            </p>
+            {stringToHtml(data.about)}
           </div>
 
           <div className="relative md:col-start-1 md:row-span-6 md:row-start-3 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:row-span-5 hidden md:block md:pr-4 md:mb-4 lg:mb-0">
@@ -109,13 +95,19 @@ export const About = ({ feed }) => {
 
 export default About;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const feed = await getInstaImages();
-  console.log(feed);
+  const res = await client.fetch(`
+    *[_type == "siteSettings"]{
+      _id,
+      about
+    }[0]
+  `);
 
   return {
     props: {
       feed,
+      data: res,
     },
   };
 };
