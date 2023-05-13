@@ -73,10 +73,10 @@ const Slider = ({ events }) => {
     <div className="grid md:grid-cols-2 md:grid-rows-5 gap-2">
       <div className="aspect-video md:aspect-square lg:aspect-video relative w-full md:row-span-5">
         <Image
-          src={images[active].imageUrl}
+          src={images[active]?.imageUrl ?? undefined}
           fill
           className="object-cover"
-          alt={images[active].author}
+          alt={images[active]?.author ?? undefined}
         />
       </div>
       {images.map((x, i) => (
@@ -95,7 +95,7 @@ const Slider = ({ events }) => {
               <time dateTime={x.publishedAt}>{x.time}</time>
             </div>
             <p>
-              {x.typ}: {x.author}
+              {x.typ}: {x.author ?? "Okänd"}
             </p>
           </div>
           <Link href={"/event/" + x.slug}>

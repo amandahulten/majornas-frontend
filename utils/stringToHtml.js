@@ -6,6 +6,7 @@
  */
 
 const stringToHtml = (string) => {
+  if ((string === undefined) | (string === null)) return;
   return string.split("\n").map((x, i) => (
     <p key={i}>
       {x}

@@ -19,7 +19,11 @@ const Home = ({ data }) => {
           ))}
         </div>
         <h2 className="text-black-coffee font-bold text-4xl">Kommande event</h2>
-        <Slider events={data.comingEventsSlider} />
+        {data.comingEventsSlider.length > 0 ? (
+          <Slider events={data.comingEventsSlider} />
+        ) : (
+          <p>Inga kommande event just nu</p>
+        )}
         <div className="grid md:grid-cols-2 text-black-coffee">
           <article className="flex flex-col gap-2">
             <h2 className="font-bold text-4xl">
