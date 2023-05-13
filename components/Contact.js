@@ -14,14 +14,14 @@ const Contact = ({ data, className, styling, display }) => {
         </div>
 
         <div>
-          <p className="flex items-center gap-2">
+          <a href={`mailto:${data.email}`} className="flex items-center gap-2">
             <MailIcon />
             {data.email}
-          </p>
-          <p className="flex items-center gap-2">
+          </a>
+          <a href={`tel:${data.phone}`} className="flex items-center gap-2">
             <PhoneIcon />
             {data.phone}
-          </p>
+          </a>
         </div>
       </div>
 
